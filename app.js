@@ -9,9 +9,12 @@ require('dotenv').config();
 var tasksRouter = require('./routes/tasks');
 var usersRouter = require('./routes/users');
 
-mongoose.connect('mongodb://localhost/task', (err) => {
-  console.log(err ? err : 'Connected to database');
-});
+mongoose.connect(
+  'mongodb+srv://admin:admin123@cluster0.7leit.mongodb.net/?retryWrites=true&w=majority',
+  (err) => {
+    console.log(err ? err : 'Connected to database');
+  }
+);
 
 var app = express();
 
